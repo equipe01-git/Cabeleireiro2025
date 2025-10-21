@@ -1,0 +1,7 @@
+{
+  "name": "CabeleireiroApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
