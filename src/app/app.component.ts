@@ -15,7 +15,7 @@ export class AppComponent {
   public appPages = [
     { title: 'Entrar', url: '/entrar', icon: 'login' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = [];
   constructor() {
     addIcons({ mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutline, heartSharp, archiveOutline, archiveSharp, trashOutline, trashSharp, warningOutline, warningSharp, bookmarkOutline, bookmarkSharp });
   }
