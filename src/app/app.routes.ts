@@ -11,4 +11,8 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./folder/folder.page').then((m) => m.FolderPage),
   },
+  {
+    path: 'entrar',
+    loadComponent: () => import('./entrar/entrar.page').then( m => m.EntrarPage)
+  },
 ];
