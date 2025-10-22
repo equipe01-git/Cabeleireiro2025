@@ -2,3 +2,18 @@ ion-content {
     --background: #1a1a1a;
     --color: #ffffff;
 }
+
+ion-button {
+    text-transform: none;
+}
+
+ion-button.CriarConta {
+    --background: #2718ff;
+    --color: #ffffff;
+}
+
+ion-button.CriarConta {
+    --background: #1a1a1a;
+    --color: #2718ff;
+    --box-shadow: 0;
+}
