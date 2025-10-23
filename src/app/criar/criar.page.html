@@ -1,6 +1,11 @@
 <ion-content [fullscreen]="true" class="ion-padding">
+  <ion-input label="Nome" labelPlacement="stacked" placeholder="Digite o seu nome"></ion-input>
+  <ion-input label="Sobrenome" labelPlacement="stacked" placeholder="Digite o seu sobrenome"></ion-input>
   <ion-input label="E-mail" labelPlacement="stacked" placeholder="Digite o seu novo E-mail"></ion-input>
-  <ion-input label="Senha" labelPlacement="stacked" type="password" placeholder="Digite a senha do seu novo E-mail">
+  <ion-input label="Senha" labelPlacement="stacked" type="password" placeholder="Digite a sua senha">
+    <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+  </ion-input>
+  <ion-input label="Comfirmar senha" labelPlacement="stacked" type="password" placeholder="Digite a sua senha novamente">
     <ion-input-password-toggle slot="end"></ion-input-password-toggle>
   </ion-input>
   <ion-button size="large" shape="round" expand="block">Criar Conta</ion-button>
