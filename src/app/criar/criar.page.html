@@ -1,3 +1,7 @@
-<ion-content [fullscreen]="true">
-  
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-input label="E-mail" labelPlacement="stacked" placeholder="Digite o seu novo E-mail"></ion-input>
+  <ion-input label="Senha" labelPlacement="stacked" type="password" placeholder="Digite a senha do seu novo E-mail">
+    <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+  </ion-input>
+  <ion-button size="large" shape="round" expand="block">Criar Conta</ion-button>
 </ion-content>
