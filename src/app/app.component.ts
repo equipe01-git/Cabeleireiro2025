@@ -14,7 +14,6 @@ import { mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutlin
 export class AppComponent {
   public appPages = [
     { title: 'Entrar', url: '/entrar', icon: '' },
-    { title: 'Criar', url: '/criar', icon: '' },
   ];
   public labels = [];
   constructor() {
