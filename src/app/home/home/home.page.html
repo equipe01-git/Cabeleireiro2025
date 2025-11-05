@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Bem-vindo ao Studio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="home-banner">
+    <ion-icon name="cut" class="banner-icon"></ion-icon>
+    <h1>Transforme seu visual hoje</h1>
+    <p>Agende com os melhores profissionais do salão</p>
+  </div>
+
+  <div class="action-buttons">
+    <ion-button expand="block" color="success" size="large" (click)="navigateToSchedule()">
+      <ion-icon slot="start" name="calendar"></ion-icon>
+      Agendar Horário
+    </ion-button>
+
+    <ion-button expand="block" fill="outline" (click)="navigateToServices()">
+      <ion-icon slot="start" name="list"></ion-icon>
+      Ver Serviços
+    </ion-button>
+
+    <ion-button expand="block" fill="outline" (click)="navigateToAppointments()">
+      <ion-icon slot="start" name="time"></ion-icon>
+      Meus Agendamentos
+    </ion-button>
+
+    <ion-button expand="block" fill="clear" (click)="navigateToProfile()">
+      <ion-icon slot="start" name="person"></ion-icon>
+      Meu Perfil
+    </ion-button>
+  </div>
+
+  <div class="features">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Por que escolher nosso Studio?</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-icon name="checkmark-circle" color="success" slot="start"></ion-icon>
+            <ion-label>Profissionais qualificados</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="checkmark-circle" color="success" slot="start"></ion-icon>
+            <ion-label>Produtos de qualidade</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="checkmark-circle" color="success" slot="start"></ion-icon>
+            <ion-label>Ambiente acolhedor</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="checkmark-circle" color="success" slot="start"></ion-icon>
+            <ion-label>Agendamento fácil</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
