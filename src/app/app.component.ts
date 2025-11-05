@@ -15,7 +15,7 @@ export class AppComponent {
   public appPages = [
     { title: 'Entrar', url: '/entrar', icon: '' },
     { title: 'Home', url: '/home', icon: '' },
-    { title: 'Profilr', url: '/profile', icon: '' },
+    { title: 'Profile', url: '/profile', icon: '' },
   ];
   public labels = [];
   constructor() {
