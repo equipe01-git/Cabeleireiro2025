@@ -16,6 +16,8 @@ export class AppComponent {
     { title: 'Entrar', url: '/entrar', icon: '' },
     { title: 'Home', url: '/home', icon: '' },
     { title: 'Profile', url: '/profile', icon: '' },
+    { title: 'Agendamento', url: '/agendamento', icon: '' },
+    { title: 'Histórico', url: '/historico', icon: '' },
     { title: 'Provedor', url: '/provedor', icon: '' },
     { title: 'Criar Serviço', url: '/criarservico', icon: '' },
   ];
