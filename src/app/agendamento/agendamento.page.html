@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Meu Calendário Standalone</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h2>Data Selecionada:</h2>
+  <p>**{{ dataExibicao }}**</p>
+
+  <ion-button id="open-datetime-modal" expand="block" color="secondary">
+    Abrir Calendário
+  </ion-button>
+
+  <ion-modal trigger="open-datetime-modal" [showBackdrop]="true">
+    <ng-template>
+      <ion-content>
+        
+        <ion-datetime
+          id="datetime-picker"
+          presentation="date"
+          (ionChange)="handleDateChange($event)"
+          [ngModel]="dataSelecionada"
+          [preferWheel]="false"
+          color="tertiary"
+        ></ion-datetime>
+
+        <ion-button expand="block" routerLink="/">Fechar</ion-button>
+        
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

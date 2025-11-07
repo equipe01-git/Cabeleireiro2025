@@ -1,0 +1,218 @@
+
+:root {
+
+    
+
+    --ion-color-dark-bg: #1e1e1e;
+
+    
+
+    --ion-color-dark-list: #333333;
+
+   
+
+    --ion-color-dark-list-contrast: #f0f0f0;
+
+}
+
+.ion-color-dark-list {
+
+    --ion-color-base: var(--ion-color-dark-list);
+
+    --ion-color-contrast: var(--ion-color-dark-list-contrast);
+
+}
+
+ion-header {
+
+    ion-toolbar {
+
+        --background: var(--ion-color-dark-bg);
+
+        --color: white;
+
+        border-bottom: 1px solid #333;
+
+    }
+
+}
+
+
+
+ion-content {
+
+    --background: var(--ion-color-dark-bg);
+
+    
+
+    --padding-start: 0;
+
+    --padding-end: 0;
+
+    --padding-top: 0;
+
+    --padding-bottom: 0;
+
+}
+
+.accordion-list {
+
+    margin: 16px;
+
+    background: transparent; 
+
+    
+
+    
+
+    ion-accordion {
+
+        margin-bottom: 16px; 
+
+        border-radius: 8px;
+
+        overflow: hidden; 
+
+
+
+        ion-item[slot="header"] {
+
+            
+
+            --background: var(--ion-color-primary, #2718ff);
+
+            --color: white;
+
+            font-weight: bold;
+
+            height: 50px;
+
+            
+
+            
+
+            ion-icon {
+
+                transition: transform 0.3s ease;
+
+            }
+
+        }
+
+    }
+
+    
+
+    
+
+    ion-accordion:not(.accordion-expanded) {
+
+        ion-item[slot="header"] {
+
+             
+
+            ion-icon {
+
+                transform: rotate(180deg); 
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+ion-item[color="dark-list"] {
+
+    --background: var(--ion-color-dark-list);
+
+    --color: var(--ion-color-dark-list-contrast); 
+
+    --border-color: #444; 
+
+    
+
+    
+
+    ion-note {
+
+        color: #f0f0f0; 
+
+        font-weight: 600;
+
+    }
+
+}
+
+
+
+
+
+ion-accordion div[slot="content"] ion-item:last-child {
+
+    --border-width: 0 !important;
+
+}
+
+
+
+
+
+ion-footer {
+
+    ion-toolbar {
+
+        --background: var(--ion-color-dark-bg);
+
+    }
+
+
+
+    ion-tab-bar {
+
+        --background: var(--ion-color-dark-bg);
+
+        --border: none;
+
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+
+    }
+
+    
+
+    ion-tab-button {
+
+        --color: #777; 
+
+        --color-selected: var(--ion-color-primary, #2718ff); 
+
+        
+
+        ion-icon {
+
+            font-size: 1.8em;
+
+        }
+
+    }
+
+    
+
+    
+
+    .ion-color-selected {
+
+        --background-focused: transparent;
+
+        --background-activated: transparent;
+
+        background: transparent; 
+
+    }
+
+}
