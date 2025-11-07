@@ -23,6 +23,15 @@ export const routes: Routes = [
     loadComponent: () => import('./profile/profile.page').then( m => m.ProfilePage)
   },
   {
+    path: 'agendamento',
+    loadComponent: () => import('./agendamento/agendamento.page').then( m => m.CalendarioComponent)
+  },
+  {
+    path: 'historico',
+    loadComponent: () => import('./historico/historico.page').then( m => m.HistoricoPage)
+  },
+  {
+  {
     path: 'provedor',
     loadComponent: () => import('./provedor/provedor.page').then( m => m.ProvedorPage)
   },
