@@ -31,7 +31,6 @@ export const routes: Routes = [
     loadComponent: () => import('./historico/historico.page').then( m => m.HistoricoPage)
   },
   {
-  {
     path: 'provedor',
     loadComponent: () => import('./provedor/provedor.page').then( m => m.ProvedorPage)
   },
