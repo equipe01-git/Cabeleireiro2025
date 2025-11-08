@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { IonTitle, IonHeader, IonContent, IonToolbar, IonItem, IonCard, IonCardTitle, IonCardHeader, IonCardContent, IonList , IonLabel, IonIcon, IonButton } from '@ionic/angular/standalone';
+import { IonTitle, IonHeader, IonContent, IonToolbar, IonIcon, IonButton } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
-  imports: [IonTitle, IonHeader, IonContent, IonToolbar, IonItem, IonCard, IonCardTitle, IonCardHeader, IonCardContent, IonList , IonLabel, IonIcon, IonButton]
+  imports: [IonTitle, IonHeader, IonContent, IonToolbar, IonIcon, IonButton]
 })
 export class HomePage {
   constructor(private navCtrl: NavController) {}
