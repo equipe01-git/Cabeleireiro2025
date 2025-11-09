@@ -3,6 +3,14 @@ ion-content {
     --color: #ffffff;
 }
 
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
 ion-button {
     --background: #109AFF;
     --color: #ffffff;
@@ -14,3 +22,4 @@ ion-button.Voltar {
     --color: #109AFF;
     --box-shadow: 0;
 }
+
