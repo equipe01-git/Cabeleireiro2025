@@ -3,8 +3,20 @@ ion-content {
     --color: #ffffff;
 }
 
+ion-toolbar {
+    --background: #109AFF;
+    --color: #ffffff;
+}
+
 ion-button {
     --background: #109AFF;
     --color: #ffffff;
 }
 
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
