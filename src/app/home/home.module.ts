@@ -1,17 +1,14 @@
-import { IonicModule } from '@ionic/angular';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { HomePage } from './home.page';
+import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { IonTitle, IonHeader, IonContent, IonToolbar, IonIcon, IonButton } from '@ionic/angular/standalone';
+import { RouterLink } from '@angular/router';
 
-@NgModule({
-  imports: [
-    IonicModule,
-    CommonModule,
-    FormsModule,
-    RouterModule.forChild([{ path: '', component: HomePage }]),
-  ],
-  declarations: [HomePage],
+@Component({
+  selector: 'app-provedor',
+  templateUrl: './provedor.page.html',
+  styleUrls: ['./provedor.page.scss'],
+  imports: [IonTitle, RouterLink, IonHeader, IonContent, IonToolbar, IonIcon, IonButton]
 })
-export class HomePageModule {}
+export class ProvedorPage {
+  constructor() {}
+}
