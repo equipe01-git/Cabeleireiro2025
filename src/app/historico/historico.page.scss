@@ -1,36 +1,19 @@
 :root {
-
-    
-
-    --ion-color-dark-bg: #1e1e1e;
-
-    
-
-    --ion-color-dark-list: #333333;
-
-   
-
-    --ion-color-dark-list-contrast: #f0f0f0;
+    --background: #1E1E1E;
+    --color: #ffffff;
 
 }
 
 .ion-color-dark-list {
-
-    --ion-color-base: var(--ion-color-dark-list);
-
-    --ion-color-contrast: var(--ion-color-dark-list-contrast);
-
+    --background: #1E1E1E;
+    --color: #ffffff;
 }
 
 ion-header {
 
     ion-toolbar {
-
-        --background: var(--ion-color-dark-bg);
-
-        --color: white;
-
-        border-bottom: 1px solid #333;
+        --background: #1E1E1E;
+        --color: #ffffff;
 
     }
 
@@ -40,25 +23,15 @@ ion-header {
 
 ion-content {
 
-    --background: var(--ion-color-dark-bg);
-
-    
-
-    --padding-start: 0;
-
-    --padding-end: 0;
-
-    --padding-top: 0;
-
-    --padding-bottom: 0;
+    --background: #1E1E1E;
+    --color: #ffffff;
 
 }
 
 .accordion-list {
 
-    margin: 16px;
-
-    background: transparent; 
+    --background: #1E1E1E;
+    --color: #ffffff;
 
     
 
@@ -216,4 +189,3 @@ ion-footer {
 
 
 }
-
