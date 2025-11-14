@@ -1,13 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>provedor</ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Provedor</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">provedor</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="home-banner">
+    <ion-icon name="cut" class="banner-icon"></ion-icon>
+    <h1>Transforme seu visual hoje</h1>
+    <p>Agende com os melhores profissionais do salão</p>
+  </div>
+
+  <div class="action-buttons">
+    <ion-button routerLink="/agendamento" class="color" expand="block" size="large">
+      Agendar Horário
+    </ion-button>
+
+    <ion-button routerLink="/historico" expand="block" fill="outline">
+      Meus Agendamentos
+    </ion-button>
+
+    <ion-button routerLink="/profile" expand="block" fill="clear">
+      Meu Perfil
+    </ion-button>
+  </div>
 </ion-content>
+
+
