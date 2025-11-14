@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonDatetime, IonModal, IonButton } from '@ionic/angular/standalone';
+import { IonHeader, IonBackButton, IonButtons, IonToolbar, IonTitle, IonContent, IonDatetime, IonModal, IonButton } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-calendario',
@@ -18,7 +18,9 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonDatetime, IonModal, Ion
     IonContent,
     IonDatetime,
     IonModal,
-    IonButton
+    IonButton,
+    IonBackButton,
+    IonButtons
   ],
 })
 export class CalendarioComponent implements OnInit {
