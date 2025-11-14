@@ -10,21 +10,5 @@ import { RouterLink } from '@angular/router';
   imports: [IonTitle, IonHeader, IonContent, IonToolbar, IonIcon, IonButton, RouterLink]
 })
 export class HomePage {
-  constructor(private navCtrl: NavController) {}
-
-  navigateToProfile() {
-    this.navCtrl.navigateForward('/profile');
-  }
-
-  navigateToSchedule() {
-    this.navCtrl.navigateForward('/schedule');
-  }
-
-  navigateToServices() {
-    this.navCtrl.navigateForward('/services');
-  }
-
-  navigateToAppointments() {
-    this.navCtrl.navigateForward('/appointments');
-  }
+  constructor() {}
 }
