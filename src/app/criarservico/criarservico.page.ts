@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -8,6 +9,9 @@ import {
   IonToolbar,
   IonInput,
   IonButton,
+  IonGrid,
+  IonRow,
+  IonCol,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -24,6 +28,9 @@ import {
     FormsModule,
     IonInput,
     IonButton,
+    IonGrid,
+    IonRow,
+    IonCol,
   ],
 })
 export class CriarservicoPage implements OnInit {
@@ -31,4 +38,3 @@ export class CriarservicoPage implements OnInit {
 
   ngOnInit() {}
 }
-
