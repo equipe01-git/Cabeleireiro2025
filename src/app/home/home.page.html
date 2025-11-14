@@ -12,23 +12,15 @@
   </div>
 
   <div class="action-buttons">
-    <ion-button expand="block" color="success" size="large" (click)="navigateToSchedule()">
-      <ion-icon slot="start" name="calendar"></ion-icon>
+    <ion-button routerLink="/agendamento" expand="block" color="success" size="large">
       Agendar Horário
     </ion-button>
 
-    <ion-button expand="block" fill="outline" (click)="navigateToServices()">
-      <ion-icon slot="start" name="list"></ion-icon>
-      Ver Serviços
-    </ion-button>
-
-    <ion-button expand="block" fill="outline" (click)="navigateToAppointments()">
-      <ion-icon slot="start" name="time"></ion-icon>
+    <ion-button routerLink="/historico" expand="block" fill="outline">
       Meus Agendamentos
     </ion-button>
 
-    <ion-button expand="block" fill="clear" (click)="navigateToProfile()">
-      <ion-icon slot="start" name="person"></ion-icon>
+    <ion-button routerLink="/profile" expand="block" fill="clear">
       Meu Perfil
     </ion-button>
   </div>
