@@ -3,6 +3,11 @@ ion-content {
     --color: #ffffff;
 }
 
+ion-button.color {
+  --background: #109AFF;
+  --color: #ffffff;
+}
+
 .home-banner {
   text-align: center;
   padding: 40px 20px;
@@ -10,6 +15,7 @@ ion-content {
   border-radius: 16px;
   color: white;
   margin-bottom: 24px;
+  
 
   .banner-icon {
     font-size: 64px;
@@ -31,12 +37,6 @@ ion-content {
 
 .action-buttons {
   margin-bottom: 24px;
-
-  ion-button {
-    margin-bottom: 12px;
-    --border-radius: 12px;
-    font-weight: 500;
-  }
 }
 
 .features {
@@ -57,4 +57,14 @@ ion-content {
       }
     }
   }
+}
+
+ion-button {
+    --background: #1E1E1E;
+    --color: #109AFF;
+  }
+
+ion-button.color {
+  --background: #109AFF;
+  --color: #ffffff;
 }
