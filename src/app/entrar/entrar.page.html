@@ -3,8 +3,8 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-input label="E-mail" labelPlacement="stacked" placeholder="Digite o seu E-mail"></ion-input>
-          <ion-input label="Senha" labelPlacement="stacked" type="password" placeholder="Digite a sua senha">
+          <ion-input label="E-mail" [(ngModel)]="idemail" labelPlacement="stacked" placeholder="Digite o seu E-mail"></ion-input>
+          <ion-input label="Senha" [(ngModel)]="senhaemail" labelPlacement="stacked" type="password" placeholder="Digite a sua senha">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
           <ion-button size="small" class="CriarConta">Recuperar Senha</ion-button>
