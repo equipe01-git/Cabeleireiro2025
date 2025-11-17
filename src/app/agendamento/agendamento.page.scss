@@ -8,11 +8,24 @@ ion-datetime {
     --color: #ffffff;
 }
 
-.centro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+ion-datetime-button {
+    --background: #0163aa;
+    --color: #ffffff;
 }
 
+ion-list-color{
+    --background: #1E1E1E;
+    --color: #ffffff;
+}
+
+ion-item {
+    --background: #1E1E1E;
+    --color: #ffffff;
+}
+
+.rounded-item {
+  --border-radius: 12px; 
+  --background: transparent;
+  --inner-border-width: 0;
+  --border-width: 1px;
+}
