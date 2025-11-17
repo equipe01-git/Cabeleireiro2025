@@ -7,3 +7,12 @@ ion-datetime {
     --background: #1E1E1E;
     --color: #ffffff;
 }
+
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
