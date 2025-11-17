@@ -37,5 +37,14 @@ export class CalendarioComponent implements OnInit {
   ngOnInit() {
   }
 
+  cabelo() {this.corte = "cabelo"}
+  barba() {this.corte = "barba"}
+  bigode() {this.corte = "bigode"}
+  cabelobarba() {this.corte = "cabelo+barba"}
+  cabelobigode() {this.corte = "cabelo+bigode"}
+  barbabigode() {this.corte = "barba+bigode"}
+  cabelobarbabigode() {this.corte = "cabelo+barba+bigode"}
+
 }
+
 
