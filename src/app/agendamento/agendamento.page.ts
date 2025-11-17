@@ -27,9 +27,15 @@ import { IonHeader, IonBackButton, IonButtons, IonToolbar, IonTitle, IonContent,
 })
 export class CalendarioComponent implements OnInit {
 
+  public dia: string ='';
+  public mes: string ='';
+  public ano: string ='';
+  public corte: string ='';
+
   constructor() { }
 
   ngOnInit() {
   }
 
 }
+
