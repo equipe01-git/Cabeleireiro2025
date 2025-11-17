@@ -15,6 +15,13 @@ export class CriarPage implements OnInit {
 
   constructor() { }
 
+  public nome: string = '';
+  public sobrenome: string = '';
+  public email: string = '';
+  public senha: string = '';
+  public senhacom: string = '';
+  public emailrec: string = '';
+  
   ngOnInit() {
   }
 
