@@ -6,16 +6,17 @@
           <ion-input label="Dia" [(ngModel)] = "dia" labelPlacement="stacked" placeholder="Digite a dia do seu agendamento"></ion-input>
           <ion-input label="Mês" [(ngModel)] = "mes" labelPlacement="stacked" placeholder="Digite o mês do seu agendamento"></ion-input>
           <ion-input label="Ano" [(ngModel)] = "ano" labelPlacement="stacked" placeholder="Digite o ano do seu agendamento"></ion-input>
-          <ion-button>Cabelo</ion-button>
-          <ion-button>Barba</ion-button>
-          <ion-button>Bigode</ion-button>
-          <ion-button>Cabelo + Barba</ion-button>
-          <ion-button>Cabelo + Bigode</ion-button>
-          <ion-button>Barba + Bigode</ion-button>
-          <ion-button>Cabelo + Barba + Bigode</ion-button>
+          <ion-button (click)="cabelo()">Cabelo</ion-button>
+          <ion-button (click)="barba()">Barba</ion-button>
+          <ion-button (click)="bigode()">Bigode</ion-button>
+          <ion-button (click)="cabelobarba()">Cabelo + Barba</ion-button>
+          <ion-button (click)="cabelobigode()">Cabelo + Bigode</ion-button>
+          <ion-button (click)="barbabigode()">Barba + Bigode</ion-button>
+          <ion-button (click)="cabelobarbabigode()">Cabelo + Barba + Bigode</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
   </div>
 </ion-content>
+
 
