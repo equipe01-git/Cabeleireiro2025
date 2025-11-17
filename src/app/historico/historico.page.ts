@@ -8,7 +8,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonIcon, IonFo
   templateUrl: './historico.page.html',
   styleUrls: ['./historico.page.scss'],
   standalone: true,
-  imports: [IonNote, IonLabel, IonItem, IonAccordion, IonAccordionGroup, IonBackButton, IonTabButton, IonTabBar, IonTabs, IonFooter, IonIcon, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonNote, IonLabel, IonItem, IonAccordion, IonAccordionGroup, IonBackButton, IonTabButton, IonTabBar, IonFooter, IonIcon, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class HistoricoPage implements OnInit {
 
