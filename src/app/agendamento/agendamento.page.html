@@ -1,36 +1,20 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Meu Calendário Standalone</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content class="ion-padding">
-
-  <ion-button id="open-datetime-modal" expand="block" color="secondary">
-    Abrir Calendário
-  </ion-button>
-
-  <ion-modal trigger="open-datetime-modal" [showBackdrop]="true">
-    <ng-template>
-      <ion-content>
-        
-        <ion-datetime
-          id="datetime-picker"
-          presentation="date"
-          (ionChange)="handleDateChange($event)"
-          [ngModel]="dataSelecionada"
-          [preferWheel]="false"
-          color="tertiary"
-        ></ion-datetime>
-
-        <ion-button expand="block" routerLink="/">Fechar</ion-button>
-        
-      </ion-content>
-    </ng-template>
-  </ion-modal>
-
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="centro">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-input label="Dia" labelPlacement="stacked" placeholder="Digite a dia do seu agendamento"></ion-input>
+          <ion-input label="Mês" labelPlacement="stacked" placeholder="Digite o mês do seu agendamento"></ion-input>
+          <ion-input label="Ano" labelPlacement="stacked" placeholder="Digite o ano do seu agendamento"></ion-input>
+          <ion-button>Cabelo</ion-button>
+          <ion-button>Barba</ion-button>
+          <ion-button>Bigode</ion-button>
+          <ion-button>Cabelo + Barba</ion-button>
+          <ion-button>Cabelo + Bigode</ion-button>
+          <ion-button>Barba + Bigode</ion-button>
+          <ion-button>Cabelo + Barba + Bigode</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>
-
