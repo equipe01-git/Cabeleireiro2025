@@ -1,22 +1,145 @@
-<ion-content [fullscreen]="true" class="ion-padding">
-  <div class="centro">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-input label="Dia" [(ngModel)] = "dia" labelPlacement="stacked" placeholder="Digite a dia do seu agendamento"></ion-input>
-          <ion-input label="Mês" [(ngModel)] = "mes" labelPlacement="stacked" placeholder="Digite o mês do seu agendamento"></ion-input>
-          <ion-input label="Ano" [(ngModel)] = "ano" labelPlacement="stacked" placeholder="Digite o ano do seu agendamento"></ion-input>
-          <ion-button (click)="cabelo()">Cabelo</ion-button>
-          <ion-button (click)="barba()">Barba</ion-button>
-          <ion-button (click)="bigode()">Bigode</ion-button>
-          <ion-button (click)="cabelobarba()">Cabelo + Barba</ion-button>
-          <ion-button (click)="cabelobigode()">Cabelo + Bigode</ion-button>
-          <ion-button (click)="barbabigode()">Barba + Bigode</ion-button>
-          <ion-button (click)="cabelobarbabigode()">Cabelo + Barba + Bigode</ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agendamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+
+  <h2>Data Selecionada:</h2>
+  <p>**{{ dataExibicao }}**</p>
+
+  <ion-item button id="open-date-modal" color="secondary" class="rounded-item">
+    <ion-label style="font-size: 0.9em;">Selecionar Data</ion-label>
+    <ion-label slot="end" color="light">{{ dataExibicao }}</ion-label>
+  </ion-item>
+
+  <ion-modal trigger="open-date-modal">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Selecione a Data</ion-title>
+          <ion-buttons slot="end">
+            <!-- Fecha o modal de data -->
+            <ion-button onclick="this.closest('ion-modal').dismiss()">Fechar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-datetime
+          id="datetime-picker"
+          presentation="date"
+          (ionChange)="handleDateChange($event)"
+          [ngModel]="dataSelecionada"
+          locale="pt-BR"
+          [showDefaultButtons]="true"
+        ></ion-datetime>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-item lines="none"></ion-item>
+
+  <h2>Horário Selecionado:</h2>
+  <p>**{{ horarioExibicao }}**</p>
+
+  <ion-item button id="open-time-modal" color="secondary" detail (click)="openHorarioPicker()" class="rounded-item">
+    <ion-label style="font-size: 0.9em;">Selecionar Horário</ion-label>
+    <ion-label slot="end" color="light">{{ horarioExibicao }}</ion-label>
+  </ion-item>
+
+  <ion-modal 
+    #modalHorarios 
+    [initialBreakpoint]="0.5" 
+    [breakpoints]="[0, 0.5, 0.75]"
+    handleBehavior="cycle"
+    [handle]="false"
+  >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Selecione o Horário</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="modalHorarios.dismiss(null, 'cancel')">Fechar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding ion-content-dark-bg">
+        <ion-list lines="none">
+          <!-- Lista de Horários -->
+          <ion-item 
+            *ngFor="let time of availableTimes" 
+            button 
+            (click)="selectTime(time)" 
+            detail="false"
+            class="text-color-white"
+          >
+            <ion-label class="ion-text-center">{{ time }}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-item lines="none"></ion-item>
+
+  <h2>Serviço Selecionado:</h2>
+  <p>**{{ serviceExibicao }}**</p>
+  
+  <ion-item button id="open-service-modal" color="secondary" detail (click)="openServicePicker()" class="rounded-item">
+    <ion-label style="font-size: 0.9em;">Selecionar Serviço</ion-label>
+    <ion-label slot="end" color="light">{{ serviceExibicao }}</ion-label>
+  </ion-item>
+
+  <ion-modal 
+    #modalServicos 
+    [initialBreakpoint]="0.5" 
+    [breakpoints]="[0, 0.5, 0.75]"
+    handleBehavior="cycle"
+    [handle]="false"
+  >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Selecione o Serviço</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="modalServicos.dismiss(null, 'cancel')">Fechar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      
+      <ion-content class="ion-padding ion-content-dark-bg">
+        <ion-list lines="none">
+          <!-- Lista de Serviços -->
+          <ion-item 
+            *ngFor="let service of availableServices" 
+            button 
+            (click)="selectService(service)"
+            detail="false"
+            class="text-color-white"
+          >
+            <ion-label class="ion-text-center">{{ service }}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-item lines="none"></ion-item>
+
+  <ion-button 
+    expand="full" 
+    class="ion-margin-top" 
+    [disabled]="!dataSelecionada || !horarioSelecionado || !serviceSelecionado"
+  >
+    Confirmar Agendamento
+  </ion-button>
+
 </ion-content>
-
-
