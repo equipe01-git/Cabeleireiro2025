@@ -1,29 +1,60 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title>Provedor</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <div class="home-banner">
-    <ion-icon name="cut" class="banner-icon"></ion-icon>
-    <h1>Transforme seu visual hoje</h1>
-    <p>Agende com os melhores profissionais do salão</p>
-  </div>
 
-  <div class="action-buttons">
-    <ion-button routerLink="/agendamento" class="color" expand="block" size="large">
-      Agendar Horário
-    </ion-button>
+  <ion-accordion-group value="current" class="accordion-list">
 
-    <ion-button routerLink="/historico" expand="block" fill="outline">
-      Meus Agendamentos
-    </ion-button>
+    <ion-accordion value="current" class="current-appointments">
 
-    <ion-button routerLink="/profile" expand="block" fill="clear">
-      Meu Perfil
-    </ion-button>
-  </div>
+      <ion-item slot="header" color="primary">
+        <ion-label>Trabalhos Pendentes</ion-label>
+        <ion-icon slot="end" name="chevron-up-outline"></ion-icon>
+      </ion-item>
+
+      <div slot="content">
+      </div>
+
+    </ion-accordion>
+
+    <ion-accordion value="history" class="history-appointments">
+
+      <ion-item slot="header" color="primary">
+        <ion-label>Histórico</ion-label>
+        <ion-icon slot="end" name="chevron-up-outline"></ion-icon>
+      </ion-item>
+
+      <div slot="content">
+      </div>
+
+    </ion-accordion>
+
+  </ion-accordion-group>
+
 </ion-content>
 
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="agendamentos" class="ion-color-selected">
+          <ion-icon name="calendar"></ion-icon>
+        </ion-tab-button>
 
+        <ion-tab-button tab="home">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="perfil">
+          <ion-icon name="person-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
