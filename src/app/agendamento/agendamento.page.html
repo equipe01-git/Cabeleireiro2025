@@ -3,9 +3,9 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-input label="Dia" labelPlacement="stacked" placeholder="Digite a dia do seu agendamento"></ion-input>
-          <ion-input label="Mês" labelPlacement="stacked" placeholder="Digite o mês do seu agendamento"></ion-input>
-          <ion-input label="Ano" labelPlacement="stacked" placeholder="Digite o ano do seu agendamento"></ion-input>
+          <ion-input label="Dia" [(ngModel)] = "dia" labelPlacement="stacked" placeholder="Digite a dia do seu agendamento"></ion-input>
+          <ion-input label="Mês" [(ngModel)] = "mes" labelPlacement="stacked" placeholder="Digite o mês do seu agendamento"></ion-input>
+          <ion-input label="Ano" [(ngModel)] = "ano" labelPlacement="stacked" placeholder="Digite o ano do seu agendamento"></ion-input>
           <ion-button>Cabelo</ion-button>
           <ion-button>Barba</ion-button>
           <ion-button>Bigode</ion-button>
@@ -18,3 +18,4 @@
     </ion-grid>
   </div>
 </ion-content>
+
