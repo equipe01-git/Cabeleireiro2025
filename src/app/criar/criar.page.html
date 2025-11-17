@@ -4,16 +4,16 @@
       <ion-row>
         <ion-col>
           <ion-button routerLink="/entrar" size="small" class="Voltar">Voltar</ion-button>
-          <ion-input label="Nome" labelPlacement="stacked" placeholder="Digite o seu nome"></ion-input>
-          <ion-input label="Sobrenome" labelPlacement="stacked" placeholder="Digite o seu sobrenome"></ion-input>
-          <ion-input label="E-mail" labelPlacement="stacked" placeholder="Digite o seu novo E-mail"></ion-input>
-          <ion-input label="Senha" labelPlacement="stacked" type="password" placeholder="Digite a sua senha">
+          <ion-input label="Nome" [(ngModel)]="nome" labelPlacement="stacked" placeholder="Digite o seu nome"></ion-input>
+          <ion-input label="Sobrenome" [(ngModel)]="sobrenome" labelPlacement="stacked" placeholder="Digite o seu sobrenome"></ion-input>
+          <ion-input label="E-mail" [(ngModel)]="email" labelPlacement="stacked" placeholder="Digite o seu novo E-mail"></ion-input>
+          <ion-input label="Senha" [(ngModel)]="senha" labelPlacement="stacked" type="password" placeholder="Digite a sua senha">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
-          <ion-input label="Confirmar senha" labelPlacement="stacked" type="password" placeholder="Digite a sua senha novamente">
+          <ion-input label="Confirmar senha" [(ngModel)]="senhacom" labelPlacement="stacked" type="password" placeholder="Digite a sua senha novamente">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
-          <ion-input label="E-mail de Recuperação de Senha" labelPlacement="stacked" placeholder="Digite o E-mail"></ion-input>
+          <ion-input label="E-mail de Recuperação de Senha" [(ngModel)]="emailrec" labelPlacement="stacked" placeholder="Digite o E-mail"></ion-input>
           <ion-button routerLink="/entrar" shape="round" expand="block">Criar Conta</ion-button>
         </ion-col>
       </ion-row>
