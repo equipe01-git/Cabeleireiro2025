@@ -19,7 +19,6 @@ export class AppComponent {
     { title: 'Agendamento', url: '/agendamento', icon: '' },
     { title: 'Histórico', url: '/historico', icon: '' },
     { title: 'Provedor', url: '/provedor', icon: '' },
-    { title: 'Criar Serviço', url: '/criarservico', icon: '' },
   ];
   public labels = [];
   constructor() {
