@@ -10,182 +10,113 @@
 }
 
 ion-header {
-
     ion-toolbar {
         --background: #1E1E1E;
         --color: #ffffff;
-
     }
-
 }
-
-
-
 ion-content {
-
     --background: #1E1E1E;
     --color: #ffffff;
 
 }
-
 .accordion-list {
-
     --background: #1E1E1E;
     --color: #ffffff;
-
-    
-
-    
 
     ion-accordion {
-
         margin-bottom: 16px; 
-
         border-radius: 8px;
-
         overflow: hidden; 
 
-
-
         ion-item[slot="header"] {
-
-            
-
             --background: var(--ion-color-primary, #2718ff);
-
             --color: white;
-
             font-weight: bold;
-
             height: 50px;
 
-            
-
-            
-
             ion-icon {
-
                 transition: transform 0.3s ease;
-
             }
-
         }
-
     }
 
-    
-
-    
-
     ion-accordion:not(.accordion-expanded) {
-
+        
         ion-item[slot="header"] {
-
-             
 
             ion-icon {
 
                 transform: rotate(180deg); 
-
             }
-
         }
-
     }
-
 }
-
-
-
-
 
 ion-item[color="dark-list"] {
-
     --background: var(--ion-color-dark-list);
-
     --color: var(--ion-color-dark-list-contrast); 
-
     --border-color: #444; 
 
-    
-
-    
-
     ion-note {
-
         color: #f0f0f0; 
-
         font-weight: 600;
-
     }
-
 }
-
-
-
-
 
 ion-accordion div[slot="content"] ion-item:last-child {
-
     --border-width: 0 !important;
-
 }
 
-
-
-
-
 ion-footer {
-
     ion-toolbar {
-
         --background: var(--ion-color-dark-bg);
 
     }
-
-
-
     ion-tab-bar {
-
         --background: var(--ion-color-dark-bg);
-
         --border: none;
-
         box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
 
     }
 
-    
-
     ion-tab-button {
-
         --color: #777; 
-
         --color-selected: var(--ion-color-primary, #2718ff); 
 
-        
-
         ion-icon {
-
             font-size: 1.8em;
-
         }
-
     }
-
-    
-
-    
-
     .ion-color-selected {
-
         --background-focused: transparent;
-
         --background-activated: transparent;
-
         background: transparent; 
-
     }
+}
+ion-accordion-group {
+   
+    --border-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 
+    ion-accordion {
+        --border-color: transparent !important;
+        
+        ion-item[slot="header"] {
+            --border-width: 0px !important;
+            --border-color: transparent !important;
+            box-shadow: none !important;
+        }
+      
+        &.accordion-content-dark {
+             border-bottom: none !important;
+        }
+    }
+}
 
+ion-accordion::part(content) {
+    background: var(--ion-color-dark, #222428) !important;
+    border: none !important;
+    box-shadow: none !important;
 }
