@@ -13,6 +13,9 @@ import { RouterModule } from '@angular/router';
 })
 export class EntrarPage implements OnInit {
 
+  public idemail: string = '';
+  public senhaemail: string = '';
+
   constructor() {}
 
   ngOnInit() {
