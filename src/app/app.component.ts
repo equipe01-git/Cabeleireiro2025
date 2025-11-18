@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterOutlet, IonRouterLink } from '@ionic/angular/standalone';
@@ -13,12 +12,10 @@ import { mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutlin
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Entrar', url: '/entrar', icon: '' },
     { title: 'Home', url: '/home', icon: '' },
     { title: 'Profile', url: '/profile', icon: '' },
     { title: 'Agendamento', url: '/agendamento', icon: '' },
     { title: 'Histórico', url: '/historico', icon: '' },
-    { title: 'Provedor', url: '/provedor', icon: '' },
   ];
   public labels = [];
   constructor() {
