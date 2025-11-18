@@ -10,5 +10,8 @@ import { RouterLink } from '@angular/router';
   imports: [IonTitle, IonHeader, IonContent, IonToolbar, IonIcon, IonButton, RouterLink]
 })
 export class HomePage {
+
+  public provedor: boolean = true;
+
   constructor() {}
 }
