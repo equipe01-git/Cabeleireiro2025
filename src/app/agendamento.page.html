@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Meu Calendário Standalone</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="centro">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-input label="Dia" [(ngModel)] = "dia" labelPlacement="stacked" placeholder="Digite a dia do seu agendamento"></ion-input>
+          <ion-input label="Mês" [(ngModel)] = "mes" labelPlacement="stacked" placeholder="Digite o mês do seu agendamento"></ion-input>
+          <ion-input label="Ano" [(ngModel)] = "ano" labelPlacement="stacked" placeholder="Digite o ano do seu agendamento"></ion-input>
+          <ion-button (click)="cabelo()">Cabelo</ion-button>
+          <ion-button (click)="barba()">Barba</ion-button>
+          <ion-button (click)="bigode()">Bigode</ion-button>
+          <ion-button (click)="cabelobarba()">Cabelo + Barba</ion-button>
+          <ion-button (click)="cabelobigode()">Cabelo + Bigode</ion-button>
+          <ion-button (click)="barbabigode()">Barba + Bigode</ion-button>
+          <ion-button (click)="cabelobarbabigode()">Cabelo + Barba + Bigode</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
