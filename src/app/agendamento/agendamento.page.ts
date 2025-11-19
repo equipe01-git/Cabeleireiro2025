@@ -30,7 +30,8 @@ export class CalendarioComponent implements OnInit {
   public dia: string ='';
   public mes: string ='';
   public ano: string ='';
-  public corte: string ='';
+  public hora: string ='';
+  public corte: string ='Nenhum';
 
   constructor() { }
 
@@ -46,3 +47,4 @@ export class CalendarioComponent implements OnInit {
   cabelobarbabigode() {this.corte = "cabelo+barba+bigode"}
 
 }
+
