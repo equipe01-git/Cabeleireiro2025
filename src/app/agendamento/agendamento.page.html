@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>Meu Calendário Standalone</ion-title>
+    <ion-title>Agendar Horário</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -24,6 +24,7 @@
           <ion-button (click)="barbabigode()">Barba + Bigode</ion-button>
           <ion-button (click)="cabelobarbabigode()">Cabelo + Barba + Bigode</ion-button>
           <p>Corte selecionado: {{corte}}</p>
+          <ion-button routerLink="/home" shape="round" expand="block">Agendar</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
