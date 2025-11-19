@@ -6,7 +6,7 @@ import { IonTitle, IonHeader, IonContent, IonToolbar, IonIcon, IonButton, IonIte
   selector: 'app-home',
   templateUrl: './homebarbeiro.page.html',
   styleUrls: ['./homebarbeiro.page.scss'],
-  imports: [IonTitle, IonHeader, IonContent, IonToolbar, IonButton, RouterLink, IonIcon, IonItem, IonLabel, IonAccordion, IonAccordionGroup]
+  imports: [IonTitle, IonHeader, IonContent, IonToolbar, IonButton, IonIcon, IonItem, IonLabel, IonAccordion, IonAccordionGroup]
 })
 export class HomebarbeiroPage {
   constructor() {}
