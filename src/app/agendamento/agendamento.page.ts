@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonHeader, IonBackButton, IonButtons, IonToolbar, IonTitle, IonContent, IonModal, IonButton, IonInput, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
+import { RouterLink } from '@angular/router'
 
 @Component({
   selector: 'app-calendario',
@@ -22,7 +23,8 @@ import { IonHeader, IonBackButton, IonButtons, IonToolbar, IonTitle, IonContent,
     IonInput,
     IonGrid,
     IonRow,
-    IonCol
+    IonCol,
+    RouterLink
   ],
 })
 export class CalendarioComponent implements OnInit {
@@ -47,4 +49,3 @@ export class CalendarioComponent implements OnInit {
   cabelobarbabigode() {this.corte = "cabelo+barba+bigode"}
 
 }
-
