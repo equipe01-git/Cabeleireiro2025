@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { IonTitle, IonHeader, IonContent, IonToolbar, IonIcon, IonButton, IonItem, IonLabel, IonAccordion, IonAccordionGroup } from '@ionic/angular/standalone';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
