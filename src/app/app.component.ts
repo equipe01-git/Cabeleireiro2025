@@ -12,14 +12,7 @@ import { mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutlin
   imports: [IonApp, IonSplitPane, IonRouterOutlet],
 })
 export class AppComponent {
-  public appPages = [
-    { title: 'Entrar', url: '/entrar', icon: '' },
-    { title: 'Home', url: '/home', icon: '' },
-    { title: 'Profile', url: '/profile', icon: '' },
-    { title: 'Agendamento', url: '/agendamento', icon: '' },
-    { title: 'Histórico', url: '/historico', icon: '' },
-    { title: 'Provedor', url: '/provedor', icon: '' },
-  ];
+  public appPages = [];
   public labels = [];
   constructor() {
     addIcons({ mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutline, heartSharp, archiveOutline, archiveSharp, trashOutline, trashSharp, warningOutline, warningSharp, bookmarkOutline, bookmarkSharp });
