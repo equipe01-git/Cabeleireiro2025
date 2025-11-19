@@ -1,0 +1,31 @@
+ion-content {
+    --background: #1E1E1E;
+    --color: #ffffff;
+}
+
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+ion-button {
+    text-transform: none;
+}
+
+ion-button.Entrar {
+    --background: #109AFF;
+    --color: #ffffff;
+}
+
+ion-button.CriarConta {
+    --background: #1E1E1E;
+    --color: #109AFF;
+    --box-shadow: 0;
+}
+
+
+
+
