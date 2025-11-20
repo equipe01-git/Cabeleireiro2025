@@ -69,8 +69,8 @@ export class CalendarioComponent implements OnInit, AfterViewInit {
     'Corte Degradê',
     'Barba',
     'Corte + Barba',
-    'Corte + Hidratação',
-    'Progressiva',
+    'Sobrancelha',
+    'Pintura de Cabelo',
   ];
 
   constructor() {}
@@ -280,3 +280,4 @@ export class CalendarioComponent implements OnInit, AfterViewInit {
     }
   }
 }
+
