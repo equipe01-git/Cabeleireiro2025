@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { 
-  IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, 
-  IonIcon, IonBackButton, IonAccordionGroup, IonAccordion, 
-  IonItem, IonLabel, IonNote, AlertController, IonButton
+import {
+  IonContent, IonHeader, IonTitle, IonToolbar, IonButtons,
+  IonIcon, IonBackButton, IonAccordionGroup, IonAccordion,
+  IonItem, IonLabel, AlertController, IonButton
 } from '@ionic/angular/standalone';
 
 import { auth, db } from '../../firebase-config';
-import { collection, query, where, onSnapshot, deleteDoc, doc } from 'firebase/firestore';
+import { collection, query, where, onSnapshot, doc, deleteDoc } from 'firebase/firestore';
+import { onAuthStateChanged } from 'firebase/auth';
 
 @Component({
   selector: 'app-historico',
@@ -29,31 +30,39 @@ export class HistoricoPage implements OnInit {
   constructor(private alertController: AlertController) {}
 
   ngOnInit() {
-    this.buscarAgendamentosUsuario();
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        this.buscarAgendamentosUsuario(user.uid);
+      } else {
+        this.carregando = false;
+      }
+    });
   }
 
-  buscarAgendamentosUsuario() {
-    const usuario = auth.currentUser;
-
-    if (!usuario) {
-      console.warn("Nenhum usuário logado.");
-      this.carregando = false;
-      return;
-    }
-
+  buscarAgendamentosUsuario(uid: string) {
     const ref = collection(db, "agendamentos");
-    const q = query(ref, where("userId", "==", usuario.uid));
+    const q = query(ref, where("userId", "==", uid));
 
     onSnapshot(q, (snapshot) => {
-      this.agendamentos = snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
+      const agora = new Date();
 
-      this.agendamentos.sort((a: any, b: any) => a.data.localeCompare(b.data));
+      this.agendamentos = snapshot.docs
+        .map(doc => ({ id: doc.id, ...doc.data() }))
+        .filter((a: any) => {
+          const dataAg = new Date(`${a.data}T${a.horario}:00`);
+          return dataAg >= agora; // Só mostra futuros
+        })
+        .sort((a: any, b: any) => {
+          const dataA = new Date(`${a.data}T${a.horario}:00`).getTime();
+          const dataB = new Date(`${b.data}T${b.horario}:00`).getTime();
+          return dataA - dataB;
+        });
+
       this.carregando = false;
     });
   }
+
 
   async cancelarAgendamento(id: string) {
     const alert = await this.alertController.create({
