@@ -24,7 +24,11 @@ export class EntrarPage implements OnInit {
     try {
       await signInWithEmailAndPassword(auth, this.email, this.senha);
 
-      this.router.navigate(['/home']);
+      if (this.email == "barbeiro@gmail.com") {
+        this.router.navigate(['/homebarbeiro']);
+      } else {
+        this.router.navigate(['/home']);
+      }
 
     } catch (erro) {
       console.error("Erro ao entrar:", erro);
