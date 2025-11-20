@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+    <ion-title class="header-title">Seja bem-vindo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="home-banner fade-in">
+    <h1>App Barbearia</h1>
+    <p>Agende seu horário agora!</p>
+  </div>
+
+  <div class="action-buttons fade-in">
+    <ion-button routerLink="/agendamento" class="btn-main" expand="block">
+      Agendar Horário
+    </ion-button>
+
+    <ion-button routerLink="/historico" class="btn-main" expand="block">
+      Meus Agendamentos
+    </ion-button>
+
+    <ion-button routerLink="/perfil" class="btn-main" expand="block">
+      Meu Perfil
+    </ion-button>
+
+    <ion-button (click)="logout()" class="btn-main logout-btn" expand="block" color="danger">
+      Sair da Conta
+    </ion-button>
+  </div>
+
+  <div class="features fade-in">
+    <div class="feature-card">
+      <p>Agendamento rápido</p>
+    </div>
+    <div class="feature-card">
+      <p>Praticidade</p>
+    </div>
+    <div class="feature-card">
+      <p>Ambiente seguro</p>
+    </div>
+  </div>
+</ion-content>

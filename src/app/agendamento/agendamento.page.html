@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar class="header-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agendar Horário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-content">
+
+  <div class="banner-agendamento">
+    <h2>Escolha a data, horário e serviço</h2>
+    <p>Finalize seu agendamento em poucos cliques</p>
+  </div>
+
+  <div class="card-section">
+    <h3>Data Selecionada</h3>
+    <p class="value">{{ dataExibicao }}</p>
+
+    <ion-item button id="open-date-modal" class="input-card">
+      <ion-label>Selecionar Data</ion-label>
+      <ion-label slot="end">{{ dataExibicao }}</ion-label>
+    </ion-item>
+  </div>
+
+  <ion-modal #modalData trigger="open-date-modal">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar class="header-toolbar">
+          <ion-title>Selecione a Data</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="modalData.dismiss()">Fechar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="modal-bg" style="padding: 20px;">
+        <input type="date"
+               [(ngModel)]="dataSelecionada"
+               [min]="dataMinima"
+               style="width: 100%; padding: 15px; font-size: 18px;" />
+
+        <ion-button expand="block" style="margin-top: 20px;"
+                    (click)="confirmarData(modalData)">
+          Confirmar Data
+        </ion-button>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <div class="card-section">
+    <h3>Horário Selecionado</h3>
+    <p class="value">{{ horarioExibicao }}</p>
+
+    <ion-item button id="open-time-modal" class="input-card" (click)="openHorarioPicker()">
+      <ion-label>Selecionar Horário</ion-label>
+      <ion-label slot="end">{{ horarioExibicao }}</ion-label>
+    </ion-item>
+  </div>
+
+  <ion-modal #modalHorarios [initialBreakpoint]="0.5" [breakpoints]="[0, 0.5, 0.75]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar class="header-toolbar">
+          <ion-title>Selecionar Horário</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="modalHorarios.dismiss()">Fechar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="modal-bg">
+        <ion-list lines="none">
+          <ion-item *ngFor="let time of availableTimes" button (click)="selectTime(time)" class="modal-item">
+            <ion-label class="ion-text-center">{{ time }}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <div class="card-section">
+    <h3>Serviço Selecionado</h3>
+    <p class="value">{{ serviceExibicao }}</p>
+
+    <ion-item button id="open-service-modal" class="input-card" (click)="openServicePicker()">
+      <ion-label>Selecionar Serviço</ion-label>
+      <ion-label slot="end">{{ serviceExibicao }}</ion-label>
+    </ion-item>
+  </div>
+
+  <ion-modal #modalServicos [initialBreakpoint]="0.5" [breakpoints]="[0, 0.5, 0.75]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar class="header-toolbar">
+          <ion-title>Selecionar Serviço</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="modalServicos.dismiss()">Fechar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="modal-bg">
+        <ion-list lines="none">
+          <ion-item *ngFor="let service of availableServices" button (click)="selectService(service)" class="modal-item">
+            <ion-label class="ion-text-center">{{ service }}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-button expand="full" class="confirmar-botao"
+              [disabled]="!dataSelecionada || !horarioSelecionado || !serviceSelecionado"
+              (click)="confirmarAgendamento()">
+    Confirmar Agendamento
+  </ion-button>
+
+</ion-content>
+

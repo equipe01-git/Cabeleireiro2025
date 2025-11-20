@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="header-title">Seus Agendamentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="history-banner fade-in">
+    <h1>Histórico de Agendamentos</h1>
+    <p>Veja seus horários já marcados</p>
+  </div>
+
+  <ion-accordion-group class="accordion-group" value="current">
+
+    <ion-accordion value="current" class="accordion-card">
+
+      <ion-item slot="header" class="accordion-header">
+        <ion-label>Seus agendamentos</ion-label>
+        <ion-icon slot="end" name="chevron-up-outline"></ion-icon>
+      </ion-item>
+
+      <div slot="content" class="accordion-content">
+
+        <ion-item lines="none" *ngIf="carregando">
+          <ion-label>Carregando agendamentos...</ion-label>
+        </ion-item>
+
+        <ion-item lines="none" *ngIf="!carregando && agendamentos.length === 0">
+          <ion-label>Nenhum agendamento encontrado.</ion-label>
+        </ion-item>
+
+        <ion-item lines="none" class="appointment-card fade-in"*ngFor="let a of agendamentos">
+
+          <ion-label>
+            <b>{{ formatarData(a.data) }} - {{ a.horario }}</b><br>
+            <span style="color:#109AFF; font-weight:600;">
+              {{ a.servico }}
+            </span>
+          </ion-label>
+
+          <ion-button fill="clear" color="danger" slot="end" (click)="cancelarAgendamento(a.id)">
+            Cancelar
+          </ion-button>
+
+        </ion-item>
+
+      </div>
+
+    </ion-accordion>
+
+  </ion-accordion-group>
+
+</ion-content>

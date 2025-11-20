@@ -1,0 +1,23 @@
+ion-content {
+  --background: #1E1E1E;
+  --color: #ffffff;
+}
+
+.custom-header {
+  --background: #1E1E1E !important;
+  --color: #ffffff !important;
+  text-align: center;
+  box-shadow: none;
+}
+
+.texto-topo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  --background: #109AFF;
+  --color: #ffffff;
+  margin-top: 25px;
+  border-radius: 12px;
+}

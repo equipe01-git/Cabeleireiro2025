@@ -1,0 +1,34 @@
+ion-content {
+  --background: #1E1E1E;
+  --color: #ffffff;
+}
+
+.custom-header {
+  --background: #1E1E1E;
+  --color: #ffffff;
+  text-align: center;
+  justify-content: center !important;
+}
+
+.header-title {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.history-banner {
+  text-align: center;
+}
+
+.appointment-card {
+  --background: #111;
+  margin: 10px 15px;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+ion-note {
+  color: #109AFF !important;
+  font-weight: 600;
+}

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="header-title">Agenda do Baarbeiro</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out-outline" style="color:#fff; font-size:22px;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="history-banner fade-in">
+    <h1>Agenda de Hoje</h1>
+    <p>Veja todos os horários marcados</p>
+  </div>
+
+  <ion-item lines="none" *ngIf="carregando">
+    <ion-label>Carregando agendamentos...</ion-label>
+  </ion-item>
+
+  <ion-item lines="none" *ngIf="!carregando && agendamentos.length === 0">
+    <ion-label>Nenhum horário agendado hoje.</ion-label>
+  </ion-item>
+
+  <ion-item lines="none"
+            class="appointment-card fade-in"
+            *ngFor="let a of agendamentos">
+
+    <ion-label>
+      <b>{{ a.nomeUsuario }}</b><br>
+      <small>{{ formatarData(a.data) }}</small><br>
+      <span style="color:#109AFF; font-weight:600;">{{ a.servico }}</span>
+    </ion-label>
+
+    <ion-note slot="end">{{ a.horario }}</ion-note>
+
+  </ion-item>
+
+</ion-content>

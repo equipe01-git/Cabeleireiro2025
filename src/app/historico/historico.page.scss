@@ -1,0 +1,85 @@
+ion-content {
+  --background: #1E1E1E;
+  --color: #ffffff;
+}
+
+.custom-header {
+  --background: #1E1E1E !important;
+  --color: #ffffff !important;
+  box-shadow: none;
+  border: none;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.history-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 40px 20px;
+  background: #1a1a1a;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #fff;
+  }
+
+  p {
+    color: #ddd;
+    margin: 0;
+  }
+}
+
+.accordion-card {
+  background: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.appointment-card {
+  --background: #111 !important;
+  --color: #fff !important;
+
+  margin: 10px 15px;
+  padding: 18px;
+  border-radius: 16px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+
+  ion-note {
+    color: #109AFF !important;
+    font-weight: 600;
+  }
+}
+
+.accordion-header {
+  --background: #109AFF !important;
+  --color: #fff !important;
+  font-weight: 600;
+  height: 55px;
+  display: flex;
+  align-items: center;
+
+  ion-icon {
+    color: #fff !important;
+    transition: transform 0.3s ease;
+  }
+}
+

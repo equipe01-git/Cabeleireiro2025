@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/entrar"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recuperar Senha</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="texto-topo fade-in">
+    <h1>Esqueceu sua senha?</h1>
+    <p>Digite seu e-mail e enviaremos um link para redefinição.</p>
+  </div>
+
+  <ion-input
+    label="E-mail"
+    [(ngModel)]="email"
+    labelPlacement="stacked"
+    placeholder="Digite seu e-mail">
+  </ion-input>
+
+  <ion-button expand="block" shape="round" class="btn-primary" (click)="enviar()">
+    Enviar link
+  </ion-button>
+
+</ion-content>
+
